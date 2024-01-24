@@ -11,26 +11,26 @@
 	"private": true,
 	"scripts": {
 		"start": "yarn dev",
-		"start:web": "cd packages/web && yarn start",
-		"start:api": "cd packages/api && yarn start",
+		"start:web": "cd apps/web && yarn start",
+		"start:api": "cd apps/api && yarn start",
 		"build": "lerna run build --parallel",
-		"build:web": "cd packages/api && yarn build",
-		"build:api": "cd packages/api && yarn build",
+		"build:web": "cd apps/api && yarn build",
+		"build:api": "cd apps/api && yarn build",
 		"dev": "lerna run dev --parallel",
-		"dev:web": "cd packages/web && yarn dev",
-		"dev:api": "cd packages/api && yarn dev",
+		"dev:web": "cd apps/web && yarn dev",
+		"dev:api": "cd apps/api && yarn dev",
 		"format": "lerna run format",
 		"graphql-deploy": "lerna run graphql-deploy",
 		"lint": "lerna run lint",
-		"lint-fix": "cd packages/web && yarn eslint . --fix",
-		"lint-fix:scss": "cd packages/web && yarn stylelint **/*.{scss,css} --fix",
-		"prettier": "cd packages/web && yarn prettier --write **/*.{js,jsx,ts,tsx,scss,css} --config ./.prettierrc",
-		"prettier:check": "cd packages/web && yarn prettier --check \"**/*.{js,jsx,ts,tsx}\"",
-		"prettier:fix": " packages/web && yarn prettier --write \"**/*.{js,jsx,ts,tsx}\"",
+		"lint-fix": "cd apps/web && yarn eslint . --fix",
+		"lint-fix:scss": "cd apps/web && yarn stylelint **/*.{scss,css} --fix",
+		"prettier": "cd apps/web && yarn prettier --write **/*.{js,jsx,ts,tsx,scss,css} --config ./.prettierrc",
+		"prettier:check": "cd apps/web && yarn prettier --check \"**/*.{js,jsx,ts,tsx}\"",
+		"prettier:fix": " apps/web && yarn prettier --write \"**/*.{js,jsx,ts,tsx}\"",
 		"precommit": "yarn lint-fix && yarn lint-fix:scss && yarn prettier",
 		"prepare": "husky install",
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"postbuild": "cd packages/web && yarn postbuild",
+		"postbuild": "cd apps/web && yarn postbuild",
 		"spellcheck": "cspell ."
 	},
 	"devDependencies": {
@@ -50,8 +50,8 @@
 		"prettier": "^2.8.8"
 	},
 	"workspaces": {
-		"packages": [
-			"packages/*"
+		"apps": [
+			"apps/*"
 		]
 	},
 	"dependencies": {
