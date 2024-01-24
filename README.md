@@ -1,18 +1,15 @@
 # HIURD Website
 
-This is a [Next.js](https://nextjs.org) based website for [HIURD](https://hiurd.com) with [Strapi CMS](https://github.com/strapi/strapi).
-
-The project's data comes from two main sources: the CMS Strapi and React components that use hooks such as useMediaQuery to ensure responsive design.
+This is a [Next.js](https://nextjs.org) based website
 
 The project's structure is as follows:
 
-- A Strapi backend for the CMS
+- An Adonis.js Backend
 - A Next.js frontend that uses React for rendering components, custom hooks for API requests to Strapi to fetch data, and responsive design.
 
 ## Content
 
 - A dynamic frontend built with [Next.js](https://nextjs.org) in `/packages/web` folder
-- Content management using [Strapi CMS](https://github.com/strapi/strapi) in `/packages/cms` folder
 
 ## Quick start
 
@@ -20,13 +17,11 @@ The project's structure is as follows:
 
 2. `yarn install` in the project root folder on local to install npm packages
 
-3. `yarn seed` to initialize DB with initial seed data
-
-4. `yarn start` to start the studio and frontend locally
+3. `yarn start` to start the studio and frontend locally
    - Your CMS should be running on ...
    - Your frontend should be running on [http://localhost:3000](http://localhost:3000)
 
-5. Lint the code with:
+4. Lint the code with:
 
 ```bash
 # Linting scss files run
