@@ -1,8 +1,8 @@
 {
-	"name": "hiurd-website",
-	"version": "0.1.0",
-	"repository": "https://github.com/HIURD/hiurd-website.git",
-	"private": true,
-	"resolutions": {},
-	"workspaces": ["packages/*"]
+  "name": "LinkFarm",
+  "version": "0.1.0",
+  "repository": "linkhttps://github.com/Cedric921/LinkFarm",
+  "private": true,
+  "resolutions": {},
+  "workspaces": ["packages/*"]
 }

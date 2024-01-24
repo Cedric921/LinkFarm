@@ -1,14 +1,10 @@
 {
-  "projectName": "hiurd-website",
-  "projectOwner": "ehiurd",
+  "projectName": "link-farm",
+  "projectOwner": "ndekodev",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "files": [
-    ".github/CONTRIBUTORS.md"
-  ],
+  "files": [".github/CONTRIBUTORS.md"],
   "commitConvention": "angular",
   "contributorsPerLine": 7,
-  "contributors": [
-
-  ]
+  "contributors": []
 }
