@@ -1,4 +1,4 @@
-# HIURD Website
+# LinkFarm Website
 
 This is a [Next.js](https://nextjs.org) based website
 
