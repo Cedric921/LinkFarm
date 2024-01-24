@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://linkfarm.com/
+
+# Sitemaps
+Sitemap: https://linkfarm.com/sitemap.xml

@@ -1,0 +1,14 @@
+{
+  "lerna": "3.22.1",
+  "concurrency": 8,
+  "version": "independent",
+  "changelog": {
+    "repo": "Cedric921/LinkFarm",
+    "cacheDir": ".changelog",
+    "labels": {}
+  },
+  "stream": true,
+  "packages": ["apps/*"],
+  "npmClient": "yarn",
+  "useWorkspaces": true
+}

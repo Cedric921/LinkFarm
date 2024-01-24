@@ -1,0 +1,11 @@
+{
+  "deepscan.enable": true,
+  "editor.formatOnSave": true,
+  "cSpell.words": ["chakra", "doctl", "nprogress", "PROXIED", "Roadmap"],
+  "css.customData": [".vscode/tailwind.json"],
+  "tailwindCSS.experimental.configFile": "packages/web/tailwind.config.ts",
+  "files.associations": {
+    "*.css": "tailwindcss",
+    "*.scss": "tailwindcss"
+  }
+}

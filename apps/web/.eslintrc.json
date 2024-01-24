@@ -1,0 +1,56 @@
+{
+	"extends": [
+		"next/core-web-vitals",
+		"next",
+		"prettier",
+		"react-app",
+		"react-app/jest",
+		"plugin:storybook/recommended",
+		"plugin:tailwindcss/recommended"
+	],
+	"parserOptions": {
+		"babelOptions": {
+			"presets": ["next/babel"]
+		}
+	},
+	"rules": {
+		"testing-library/prefer-screen-queries": "off",
+		"@next/next/no-html-link-for-pages": "off",
+		"@typescript-eslint/no-unused-vars": [
+			"warn",
+			{
+				"argsIgnorePattern": "^_",
+				"varsIgnorePattern": "^_"
+			}
+		],
+		"sort-imports": [
+			"error",
+			{
+				"ignoreCase": true,
+				"ignoreDeclarationSort": true
+			}
+		],
+		"tailwindcss/classnames-order": "off",
+		"import/order": [
+			1,
+			{
+				"groups": ["external", "builtin", "internal", "sibling", "parent", "index"],
+				"pathGroups": [
+					{
+						"pattern": "components/**",
+						"group": "internal"
+					},
+					{
+						"pattern": "hooks/**",
+						"group": "internal"
+					}
+				],
+				"pathGroupsExcludedImportTypes": ["internal"],
+				"alphabetize": {
+					"order": "asc",
+					"caseInsensitive": true
+				}
+			}
+		]
+	}
+}

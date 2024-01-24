@@ -1,0 +1,86 @@
+{
+	"name": "link-farm",
+	"homepage": "https://linkfarm.com",
+	"license": "UNLICENSED",
+	"author": {
+		"name": "LINK-FARM",
+		"email": "hello@linkfarm.com",
+		"url": "https://linkfarm.com"
+	},
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"start": "yarn dev",
+		"start:web": "cd packages/web && yarn start",
+		"start:api": "cd packages/api && yarn start",
+		"build": "lerna run build --parallel",
+		"build:web": "cd packages/api && yarn build",
+		"build:api": "cd packages/api && yarn build",
+		"dev": "lerna run dev --parallel",
+		"dev:web": "cd packages/web && yarn dev",
+		"dev:api": "cd packages/api && yarn dev",
+		"format": "lerna run format",
+		"graphql-deploy": "lerna run graphql-deploy",
+		"lint": "lerna run lint",
+		"lint-fix": "cd packages/web && yarn eslint . --fix",
+		"lint-fix:scss": "cd packages/web && yarn stylelint **/*.{scss,css} --fix",
+		"prettier": "cd packages/web && yarn prettier --write **/*.{js,jsx,ts,tsx,scss,css} --config ./.prettierrc",
+		"prettier:check": "cd packages/web && yarn prettier --check \"**/*.{js,jsx,ts,tsx}\"",
+		"prettier:fix": " packages/web && yarn prettier --write \"**/*.{js,jsx,ts,tsx}\"",
+		"precommit": "yarn lint-fix && yarn lint-fix:scss && yarn prettier",
+		"prepare": "husky install",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"postbuild": "cd packages/web && yarn postbuild",
+		"spellcheck": "cspell ."
+	},
+	"devDependencies": {
+		"@next/eslint-plugin-next": "^12.3.1",
+		"@types/express": "^4.17.17",
+		"@types/node": "^18.7.19",
+		"@typescript-eslint/eslint-plugin": "^5.59.9",
+		"@typescript-eslint/parser": "^5.59.9",
+		"cspell": "8.0.0",
+		"eslint": "^8.42.0",
+		"eslint-config-prettier": "^8.8.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"eslint-plugin-react": "^7.32.2",
+		"husky": "^8.0.3",
+		"lerna": "^7.0.0",
+		"lerna-cli": "^5.1.1",
+		"prettier": "^2.8.8"
+	},
+	"workspaces": {
+		"packages": [
+			"packages/*"
+		]
+	},
+	"dependencies": {
+		"@chakra-ui/icons": "^2.0.1",
+		"@vercel/analytics": "^1.0.1",
+		"aos": "^2.3.4",
+		"atropos": "^1.0.2",
+		"dotenv": "^16.0.3",
+		"express": "^4.18.2",
+		"fireworks-js": "^2.1.0",
+		"framer-motion": "^7.5.1",
+		"html-react-parser": "^3.0.4",
+		"js-base64": "^3.7.2",
+		"next-sitemap": "^4.1.3",
+		"nextjs-progressbar": "^0.0.14",
+		"postcss-import": "^15.1.0",
+		"postmark": "^3.0.18",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-google-recaptcha": "^3.1.0",
+		"react-responsive-carousel": "^3.2.23",
+		"recoil": "^0.7.7",
+		"styled-components": "^5.3.6",
+		"stylelint": "^15.7.0",
+		"stylelint-config-standard-scss": "^9.0.0",
+		"swiper": "^8.4.2"
+	},
+  "engines": {
+		"node": ">=18.17.0",
+		"yarn": ">=1.22.17"
+	}
+}

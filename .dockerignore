@@ -1,0 +1,37 @@
+dist
+
+tmp
+.cache
+.github
+.circle
+.circleci
+.npmrc
+.husky
+.travis.yml
+greenkeeper.json
+docker-compose*.yml
+*.md
+.git/
+.gitignore
+Jenkinsfile
+
+node_modules
+apps/**/node_modules
+packages/**/node_modules
+packages/**/.next
+
+# IDEs and editors
+.idea
+.vscode
+.project
+.classpath
+*.launch
+.settings/
+
+# e2e
+e2e/*.js
+e2e/*.map
+
+#System Files
+.DS_Store
+Thumbs.db
