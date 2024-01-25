@@ -1,14 +1,15 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 import "./globals.scss";
 
+import { Analytics } from "@vercel/analytics/react";
+import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 
+import PrelineScript from "@/components/app/PrelineScript";
 import { BaseLayout } from "@/components/layouts";
 import { cn } from "@/lib/utils";
-import { Analytics } from "@vercel/analytics/react";
 
-import type { Metadata } from "next";
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
@@ -45,6 +46,7 @@ export default function RootLayout({
           <Analytics />
         </>
       </body>
+      <PrelineScript />
     </html>
   );
 }

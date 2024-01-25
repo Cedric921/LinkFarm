@@ -4,5 +4,5 @@
   "repository": "linkhttps://github.com/Cedric921/LinkFarm",
   "private": true,
   "resolutions": {},
-  "workspaces": ["packages/*"]
+  "workspaces": ["apps/*"]
 }
