@@ -1,5 +1,6 @@
 export enum ETypeUser {
   SUPER_ADMIN = 'SUPER_ADMIN',
+  ADMIN = 'ADMIN',
   FARMER = 'FARMER',
   ENTERPRISE = 'ENTERPRISE',
   USER = 'USER',

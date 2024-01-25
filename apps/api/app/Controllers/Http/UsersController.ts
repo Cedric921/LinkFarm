@@ -5,7 +5,6 @@ import { inject } from '@adonisjs/fold'
 import { ETypeUser } from 'App/Utils/Enums'
 import UserValidator from 'App/Validators/UserValidator'
 import User from 'App/Models/User'
-import { groupOperation } from 'App/Utils/groupData'
 
 @inject()
 export default class UsersController extends UserValidator {
@@ -58,8 +57,7 @@ export default class UsersController extends UserValidator {
       const userFound = await this.userService.findOne({ key: 'id', value: id })
       const userData = userFound?.toJSON()
 
-      const op = groupOperation(userFound?.operations!)
-      return response.ok({ status: true, data: { userData, operations: op } })
+      return response.ok({ status: true, data: userData })
     } catch (error) {
       Logger.error(error)
       return response.expectationFailed({
@@ -143,38 +141,6 @@ export default class UsersController extends UserValidator {
       return response.ok({
         status: true,
         message: `${user?.email} activé`,
-      })
-    } catch (error) {
-      Logger.error(error)
-      return response.expectationFailed({
-        status: false,
-        message: 'internal server error',
-      })
-    }
-  }
-
-  public async assignRole({ request, response, auth }: HttpContextContract) {
-    const { id } = await request.validate({
-      schema: this.idValidator,
-      data: { id: request.param('id') },
-    })
-    const { id: roleId } = await request.validate({
-      schema: this.idRoleValidator,
-    })
-
-    try {
-      // check permission
-      const userAuth = auth.use('api').user
-      if (userAuth?.type !== ETypeUser.ADMIN && userAuth?.type !== ETypeUser.SUPER_ADMIN)
-        return response.forbidden({
-          status: false,
-          message: 'You dont have neccessary permission to do this action',
-        })
-
-      const user = await this.userService.update(id, { role_id: roleId })
-      return response.ok({
-        status: true,
-        message: ` role assignated to ${user?.email}`,
       })
     } catch (error) {
       Logger.error(error)
