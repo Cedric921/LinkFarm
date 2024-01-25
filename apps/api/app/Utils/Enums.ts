@@ -1,6 +1,7 @@
 export enum ETypeUser {
   SUPER_ADMIN = 'SUPER_ADMIN',
-  ADMIN = 'ADMIN',
+  FARMER = 'FARMER',
+  ENTERPRISE = 'ENTERPRISE',
   USER = 'USER',
 }
 
@@ -14,20 +15,4 @@ export enum EPermision {
   post = 'POST',
   PUT = 'PUT',
   DELETE = 'DELETE',
-}
-
-export enum EtypeOperation {
-  SALE = 'SALE',
-  PURCHASE = 'PURCHASE',
-}
-
-export enum EtypeWallet {
-  BANK = 'BANK',
-  MOBILE_MONEY = 'MOBILE_MONEY',
-  CRYPTO = 'CRYPTO',
-}
-
-export enum EtypeTransaction {
-  WITHDRAW = 'WITHDRAW',
-  DEPOSIT = 'DEPOSIT',
 }
