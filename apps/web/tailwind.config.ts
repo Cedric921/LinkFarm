@@ -11,6 +11,21 @@ const config = {
 	],
   prefix: "",
   theme: {
+    fontFamily:{
+      'mono':['Mona Sans',
+      'Inter',
+      'system-ui',
+      '-apple-system',
+      'BlinkMacSystemFont',
+      'Segoe UI',
+      'Roboto',
+      'Oxygen',
+      'Ubuntu',
+      'Cantarell',
+      'Open Sans',
+      'Helvetica Neue',
+      'sans-serif']
+    },
     container: {
       center: true,
       padding: "2rem",

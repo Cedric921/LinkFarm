@@ -1,14 +1,14 @@
 /* eslint-disable tailwindcss/no-custom-classname */
-import "./globals.scss";
+import './globals.scss';
 
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import Script from "next/script";
+import { Inter } from 'next/font/google';
+import Script from 'next/script';
 
-import PrelineScript from "@/components/app/PrelineScript";
-import { BaseLayout } from "@/components/layouts";
-import { cn } from "@/lib/utils";
+import PrelineScript from '@/components/app/PrelineScript';
+import { BaseLayout } from '@/components/layouts';
+import { cn } from '@/lib/utils';
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
