@@ -5,7 +5,7 @@ import { Imail } from 'interfaces'
 async function send(template: string, email: string, data: object) {
   try {
     const courier = new CourierClient({
-      authorizationToken: 'pk_prod_AWZJCRVVWD4NF5GAFW4XS4P1J1B2',
+      authorizationToken: 'dk_prod_C7F53KFMTV441QPW84VPKZGKMFJW',
     })
     const { requestId } = await courier.send({
       message: {
@@ -23,9 +23,9 @@ async function send(template: string, email: string, data: object) {
 }
 
 export async function sendToUser(input: Imail) {
-  await send('FJZ4E5K3XP401DM72NSTNMG6B52T', input.to, input.data)
+  await send('RVFGKV0G5H45AFGTQTA9K665GYT9', input.to, input.data)
 }
 
 export async function sendOtpToUser(input: Imail) {
-  await send('NQT1DDG03YMFV3P6J5FMS31P91V1', input.to, input.data)
+  await send('RT80Z10YRMMC0CJ3GVFGAP3W2WT4', input.to, input.data)
 }

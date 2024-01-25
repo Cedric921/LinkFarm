@@ -11,7 +11,7 @@ export default class extends BaseSeeder {
         password: 'admin123',
         name: 'Super Admin',
         type: ETypeUser.SUPER_ADMIN,
-        email: 'sudo@etic.com',
+        email: 'sudo@link.com',
         number: '970000001',
         lastName: 'admin',
       })
