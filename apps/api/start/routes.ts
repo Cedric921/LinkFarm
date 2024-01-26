@@ -21,7 +21,7 @@
 import Route from '@ioc:Adonis/Core/Route'
 import './routes/user.routes'
 import './routes/config.routes'
-import './routes/operations.routes'
+import './routes/produts.routes'
 import './routes/transactions.routes'
 import AutoSwagger from 'adonis-autoswagger'
 import swagger from 'Config/swagger'

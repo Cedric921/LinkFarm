@@ -1,4 +1,4 @@
-import { ETypeUser, EtypeOperation, EtypeTransaction, EtypeWallet } from 'App/Utils/Enums'
+import { ETypeUser } from 'App/Utils/Enums'
 
 export interface Iquery {
   limit: number
@@ -22,54 +22,15 @@ export interface IuserQuery extends Iquery {
   type?: ETypeUser[]
 }
 
-export interface IwalletQuery extends Iquery {
-  number?: string
-  type?: EtypeWallet
+export interface IProductQuery extends Iquery {
+  rotAt?: Date
+}
+
+export interface IFamerProductQuery extends Iquery {
+  userId?: string
 }
 
 export interface Imail {
   to: string
   data: object
-}
-
-//  roles
-export interface Irole {
-  designation: string
-  description?: string
-}
-
-export interface IpermissionQuery extends Iquery {
-  module: string
-}
-
-export interface Ipermission {
-  module: string
-  designation: string
-  description?: string
-}
-
-export interface IrolePermissionQuery extends Iquery {
-  roleId?: string
-}
-
-export interface IrolePermission {
-  roleId?: string
-  permissionId: string
-}
-
-//  Operation
-
-export interface IoperationQuery extends Iquery {
-  userId?: string
-  articleId?: string
-  type?: EtypeOperation
-}
-
-// Transaction
-
-export interface ItransactionQuery extends Iquery {
-  userId?: string
-  articleId?: string
-  type?: EtypeTransaction
-  isValidate?: boolean
 }
