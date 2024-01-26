@@ -134,4 +134,43 @@ export default class FarmerProductsController extends FarmerProductValidator {
       })
     }
   }
+
+  // get all productions items
+  public async getProdItems({ request, response, auth }: HttpContextContract) {
+    try {
+      const { productId, orderBy = 'created_at', offset = 0, limit = 100 } = request.qs()
+
+      const userAuth = auth.use('api').user
+      if (
+        !Object.values(ETypeUser)
+          .filter((el) => el !== ETypeUser.USER && el !== ETypeUser.ENTERPRISE)
+          .includes(userAuth?.type! as ETypeUser)
+      )
+        return response.unauthorized({
+          status: false,
+          message: 'Unauthorized',
+        })
+
+      //  LOGIC HERE
+      const data = await this.fProductService.findManyPI({
+        limit,
+        orderBy,
+        productId,
+        offset,
+      })
+
+      return response.ok({
+        status: true,
+        data,
+      })
+    } catch (error) {
+      Logger.error(error)
+      return response.expectationFailed({
+        status: false,
+        message: 'An error occured',
+      })
+    }
+  }
+  // get one production items
+  // create a production item
 }

@@ -30,6 +30,10 @@ export interface IFamerProductQuery extends Iquery {
   userId?: string
 }
 
+export interface IProductionItemQuery extends Iquery {
+  productId?: string
+}
+
 export interface Imail {
   to: string
   data: object

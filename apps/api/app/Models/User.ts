@@ -1,7 +1,9 @@
 import { DateTime } from 'luxon'
 import Hash from '@ioc:Adonis/Core/Hash'
-import { column, beforeSave, BaseModel } from '@ioc:Adonis/Lucid/Orm'
+import { column, beforeSave, BaseModel, HasMany } from '@ioc:Adonis/Lucid/Orm'
 import { GENERATE_UUID } from 'App/Utils/generate'
+import { hasMany } from '@ioc:Adonis/Lucid/Orm'
+import FarmerProduct from './FarmerProduct'
 
 export default class User extends BaseModel {
   @column({ isPrimary: true })
@@ -42,6 +44,9 @@ export default class User extends BaseModel {
 
   @column.dateTime({ autoCreate: true, autoUpdate: true, serializeAs: 'updatedAt' })
   public updatedAt: DateTime
+
+  @hasMany(() => FarmerProduct)
+  public products: HasMany<typeof FarmerProduct>
 
   @beforeSave()
   public static async hashPassword(user: User) {
