@@ -5,7 +5,7 @@ This is a [Next.js](https://nextjs.org) based website
 The project's structure is as follows:
 
 - An Adonis.js Backend
-- A Next.js frontend that uses React for rendering components, custom hooks for API requests to Strapi to fetch data, and responsive design.
+- A Next.js frontend that uses React for rendering components, custom hooks for API requests to API to fetch data, and responsive design.
 
 ## Content
 
@@ -18,7 +18,7 @@ The project's structure is as follows:
 2. `yarn install` in the project root folder on local to install npm packages
 
 3. `yarn start` to start the studio and frontend locally
-   - Your CMS should be running on ...
+   - Your API should be running on ...
    - Your frontend should be running on [http://localhost:3000](http://localhost:3000)
 
 4. Lint the code with:
@@ -34,12 +34,3 @@ The project's structure is as follows:
    yarn precommit
 ```
 
-6. `yarn build` in the project root folder to build all apps in the project for production (website and cms)
-
-## Deploy changes
-
-1. Vercel automatically deploys new changes committed to `master` / `develop` / "stage" branches on GitHub to separate domains (if user who push code registered in our Vercel Team).
-
-2. There are Github Actions used to deploy CMS app to DigitalOcean k8s cluster
-
-3. PostgreSQL DB used for Strapi CMS in DigitalOcean management PostgreSQL cluster for production deployments
